@@ -1,7 +1,7 @@
 import Product from '../models/Product-model.js';
 
 
-// obtener todos los productos de la base de datos
+//Obtener todos los productos de la base de datos
 export const getProduct = async (req, res) => {
     try {
         const products = await Product.find();
@@ -31,7 +31,24 @@ export const addProduct = async (req, res) => {
   }
 };
 
-//eliminar producto
+//Modificar producto
+export const updateProduct = async (req, res) => {
+  try {
+    const { productId } = req.params;
+    const updatedProduct = await Product.findByIdAndUpdate(productId, req.body, { new: true });
+
+    if (!updatedProduct) {
+      return res.status(404).json({ message: 'El producto no existe' });
+    }
+
+    return res.status(201).json({ message: 'Producto se modifico correctamente' });
+  } catch (error) {
+    console.error('Error al actualizar el producto:', error);
+    return res.status(500).json({ message: 'Error interno del servidor' });
+  }
+};
+
+//Eliminar producto
 export const deleteProduct = async (req, res) => {
   try {
     const deleteProduct = await Product.findByIdAndDelete(req.params.productId);

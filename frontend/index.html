@@ -7,21 +7,35 @@
     <script type="module" src="js/product.js"></script>
     <script type="module" src="js/cart.js"></script>
     <script type="module" src="js/clases/producto.js"></script>
-    
-    <title>Compra de productos de limpieza</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Tienda de limpieza</title>
 </head>
 <body>
 
     <header>
         <a href="/" class="logo"><img src="img/BioActivo.png" alt="logo"> </a>
         <nav>
-            <a href="/historial-compras.html">Historial de compras</a>
-            <a href="/carrito.html" class="cart-icon">
-                <img src="img/carrito.png" alt="carrito">
+            <a href="/">Historial de compras</a>
+            <a href="/" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
                 <span class="item-count" id="cart-counter">0</span>
             </a>
         </nav>
     </header>
     <section id="product-conntainer" class="product"></section>
 </body>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Compra de productos de limpieza. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/Adistec/?locale=es_LA" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A66596&keywords=adistec&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=bbdf950e-0b67-4ba6-9b4d-3538d7623bfa&sid=qg!&spellCorrectionEnabled=true" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+</footer>
 </html>

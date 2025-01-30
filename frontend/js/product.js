@@ -1,9 +1,8 @@
-import { cartFunction } from "../js/cart.js";
+import { addToCartHandler } from "../js/cart.js";
 
 const API_URL = 'http://localhost:3001/api/products';
 
 class Producto {
-    // El constructor recibe los datos del producto
     constructor(id, name, price, description, image) {
         this.id = id;
         this.name = name;
@@ -32,8 +31,10 @@ const data = async () => {
     const $container = document.getElementById('product-conntainer'); // Obtener el contenedor donde se insertarán los productos
 
     try {
-        const response = await fetch(API_URL);  // Realizar la solicitud para obtener los productos
-        const products = await response.json();  // Convertir la respuesta en JSON
+
+        // Consumo de la API de productos y convertir a json
+        const response = await fetch(API_URL);  
+        const products = await response.json(); 
 
         // Crear los productos con la clase Producto y renderizarlos
         let productsHTML = '';
@@ -50,10 +51,10 @@ const data = async () => {
 
         // Insertar todo el HTML generado en el contenedor
         $container.innerHTML = productsHTML;
-        cartFunction();
+        addToCartHandler();
     } catch (error) {
-        console.error('Error al obtener los productos', error);  // Manejo de errores
+        console.error('Error al obtener los productos', error); 
     }
 };
 
-data(); // Llamar a la función para cargar los productos
+data();
