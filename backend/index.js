@@ -13,13 +13,13 @@ dotenv.config();
 app.use(express.json()); //permite procesar cuerpos de solicitudes
 app.use(morgan('dev')); //muestra peticiones en el servidor
 
-//base de datos
-connectDB();
-
 app.use(cors());
 
 //configuracion del puerto
 const PORT = process.env.PORT || 5000;
+
+//base de datos
+connectDB();
 
 //rutas
 app.use('/api/products', ProductRoutes);
@@ -27,5 +27,5 @@ app.use('/api/products', ProductRoutes);
 
 // escuchas al servidor 
 app.listen(PORT, () => {
-  console.log(`Servido corriendo en el puerto ${PORT}`);
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });

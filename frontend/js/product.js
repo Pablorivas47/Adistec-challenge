@@ -17,7 +17,7 @@ class Producto {
             <div class="product-card">
                 <img src="${this.image}" alt="${this.name}">
                 <h2 class="product-name">${this.name}</h2>
-                <p class="product-price">${this.price}</p>
+                <p class="product-price">$${this.price}</p>
                 <p class="product-description">${this.description}</p>
                 <div class="container-cart">
                     <button id="${this.id}" class="add-to-cart">Agregar al carrito</button>
