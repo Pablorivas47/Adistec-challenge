@@ -1,3 +1,5 @@
+import { cartFunction } from "../js/cart.js";
+
 const API_URL = 'http://localhost:3001/api/products';
 
 class Producto {
@@ -48,6 +50,7 @@ const data = async () => {
 
         // Insertar todo el HTML generado en el contenedor
         $container.innerHTML = productsHTML;
+        cartFunction();
     } catch (error) {
         console.error('Error al obtener los productos', error);  // Manejo de errores
     }
