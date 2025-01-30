@@ -46,3 +46,101 @@ nav a {
     /* Ajusta el tamaño según lo necesites */
 }
 
+.product {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Product card styles */
+.product-card {
+    height: 400px;
+    width: 250px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+
+    & img {
+        padding: 0;
+        margin: 0;
+        height: 200px;
+        /* Alto fijo */
+        width: 250px;
+        /* Ancho fijo */
+        object-fit: contain;
+        /* Ajusta la imagen manteniendo la relación de aspecto */
+        border-radius: 5px;
+        /* (Opcional) Le da bordes redondeados a la imagen */
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.container-cart {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    & button {
+        background-color: #e60023;
+        /* Color de fondo */
+        color: white;
+        /* Color del texto */
+        padding: 12px 24px;
+        /* Espaciado interior */
+        font-size: 16px;
+        /* Tamaño del texto */
+        font-weight: bold;
+        /* Negrita */
+        border: none;
+        /* Sin bordes */
+        border-radius: 5px;
+        /* Bordes redondeados */
+        cursor: pointer;
+        /* Cambiar cursor al pasar sobre el botón */
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        /* Efecto de transición */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Sombra para darle profundidad */
+
+        &:hover {
+            background-color: #ff002f;
+            /* Cambiar color al pasar el ratón */
+            transform: translateY(-2px);
+            /* Efecto de elevar el botón al hacer hover */
+        }
+
+        &:active {
+            background-color: #cc0020;
+            /* Color más oscuro cuando se hace clic */
+            transform: translateY(1px);
+            /* Efecto de presionar el botón */
+        }
+    }
+}
+
+.product-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #e60023;
+    margin-bottom: 15px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
