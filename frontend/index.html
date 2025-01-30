@@ -3,10 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compra de productos</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="js/product.js"></script>
+    <title>Compra de productos de limpieza</title>
 </head>
 <body>
-    
+
+    <header>
+        <a href="/" class="logo"><img src="img/BioActivo.png" alt="logo"> </a>
+        <nav>
+            <a href="/historial-compras.html">Historial de compras</a>
+            <a href="/carrito.html" class="cart-icon">
+                <img src="img/carrito.png" alt="carrito">
+                <span class="item-count" id="cart-counter">0</span>
+            </a>
+        </nav>
+    </header>
+    <section id="product-conntainer" class="product">
+        <div class="product-card">
+            <img src="img/products/" alt="">
+            <h2 class="product-name">name</h2>
+            <p class="product-price">precio</p>
+            <p class="product-description">description</p>
+            <div class="container-cart">
+                <button id="" class="add-to-cart">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
